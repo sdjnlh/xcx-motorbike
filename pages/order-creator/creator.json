@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-card": "/path/to/@vant/weapp/dist/card/index",
+    "van-divider": "/path/to/@vant/weapp/dist/divider/index",
+    "van-cell": "/path/to/@vant/weapp/dist/cell/index",
+    "van-button": "/path/to/@vant/weapp/dist/button/index",
+    "van-cell-group": "/path/to/@vant/weapp/dist/cell-group/index",
+    "van-action-sheet": "/path/to/@vant/weapp/dist/action-sheet/index",
+    "van-icon": "/path/to/@vant/weapp/dist/icon/index",
+    "van-panel": "/path/to/@vant/weapp/dist/panel/index"
+  }
+}

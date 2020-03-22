@@ -1,0 +1,14 @@
+<view style="height:100vh;padding-top:20px">
+  <view style="display:flex;margin-left:8px;justify-content:space-between;margin-bottom:20px">
+    <view style="margin-left:10px;font-size:14px">
+      评分</view>
+    <van-rate value="{{ value }}" bind:change="rateChange" />
+  </view>
+
+
+  <van-cell-group>
+    <van-field value="{{ detail }}" label="评论" type="textarea" placeholder="请输入评论内容" autosize border="{{ true }}" />
+  </van-cell-group>
+
+  <van-button type="warning" block style="margin-top:50px" bindtap="createComment" >添加评论</van-button>
+</view>

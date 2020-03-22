@@ -1,0 +1,9 @@
+<view style="width:100%">
+  <view style="width:100%">
+    <van-goods-action>
+      <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickIcon" />
+      <van-goods-action-button text="加入购物车" type="warning" bind:click="onClickButton" />
+      <van-goods-action-button text="立即购买" bind:click="onClickButton" />
+    </van-goods-action>
+  </view>
+</view>

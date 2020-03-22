@@ -1,0 +1,33 @@
+<view style="padding:10px">
+  <view style="font-size:12px;color:#b0b0b0">
+    购买的商品
+  </view>
+  <van-card num="2" price="2.00" desc="" title="阿萨姆奶茶" thumb="/static/n1.jpg" />
+  <van-divider />
+  <view style="font-size:12px;color:#b0b0b0;display:flex;justify-content:space-between">
+    <view>共 1 件商品</view>
+    <view>合计 ￥2</view>
+  </view>
+
+  <van-divider />
+
+  <view style="font-size:12px;color:#b0b0b0;display:flex;justify-content:space-between">
+    <view>订单编号</view>
+    <view>202003180005</view>
+  </view>
+
+  <van-divider />
+  <view style="font-size:12px;color:#b0b0b0;display:flex;justify-content:space-between">
+    <view>下单时间</view>
+    <view>2018-03-18 12:20:12</view>
+  </view>
+
+
+  <van-divider />
+  <view style="font-size:12px;color:#001938;display:flex;justify-content:space-between" bindtap="toComments">
+    <view>查看评论</view>
+    <view>1条</view>
+  </view>
+  <van-divider />
+
+</view>

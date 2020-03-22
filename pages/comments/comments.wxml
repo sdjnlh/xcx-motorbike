@@ -1,0 +1,31 @@
+<view>
+
+
+
+<view wx:for="{{comments}}">
+
+
+<van-divider />
+
+  <view style="display:flex;padding:5px">
+    <van-image width="30" round height="30" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+    <view style="margin-left:10px;display:flex;justify-content:start;align-items:start;flex-direction:column">
+      <view style="font-size:12px;color:#ccc">
+        {{item.nickname}}
+      </view>
+  
+
+      <view style="font-size:12px;color:#aaa；margin-top:3px">
+        {{item.detail}}
+      </view>
+
+      <view style="display:flex;justify-content:right;flex-direction:row">
+        <van-rate size="12" value="{{item.rate}}" icon="like" void-icon="like-o" bind:change="onChange" style="font-size:12px;margin-top:3px;" />
+      </view>
+    </view>
+  </view>
+  <van-divider />
+
+</view>
+
+</view>

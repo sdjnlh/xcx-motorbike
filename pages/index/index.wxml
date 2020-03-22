@@ -1,0 +1,52 @@
+<view style="margin-bottom:60px">
+
+
+  <van-dialog use-slot title="选择桌子" show="{{ show }}" show-cancel-button confirm-button-open-type="getUserInfo" bind:close="onClose" bind:getuserinfo="getUserInfo">
+  </van-dialog>
+
+  <!-- 上方图片 -->
+  <van-grid column-num="1" border="{{ false }}">
+    <van-grid-item use-slot>
+      <image style="width: 100%; height: 150px;" src="/static/logo.jpg" />
+    </van-grid-item>
+  </van-grid>
+  <!-- 通知栏 -->
+  <van-notice-bar left-icon="" text="悸动奶茶店新推出扫码排队功能，疫情期间全面实现无接触点买，快来体验吧" />
+
+  <view class="line-up" style="margin-left:10px;margin-right:10px;vertical-align: center;display:flex;justify-content:center;align-items:centerwidth: 100%;height: 75px;background: url('http://q74lmmaz8.bkt.clouddn.com/line_up.jpg') no-repeat 50%;background-size:contain"
+    bindtap="toQueue">
+    <!-- <view>去预约取号</view> -->
+    <view>1号 预计30分钟</view>
+  </view>
+
+  <view style="display:flex;justify-content:space-between">
+    <view style="padding:10px;font-size:14px">店铺推荐</view>
+    <view style="padding:10px;font-size:14px" bindtap="toAll">全部</view>
+  </view>
+
+  <view wx:for="{{items}}">
+    <van-card tag="{{item.tag}}" price="{{item.price}}" origin-price="{{item.price + 5}}" desc="{{item.detail}}" title="{{item.title}}" thumb="{{item.coverUrl}}">
+      <view slot="price-top">
+        <!-- 选择 -->
+        <!-- <view style="display:flex;justify-content:start;width:100%;flex-direction:row-reverse">
+          <van-stepper value="{{ 1 }}" />
+        </view> -->
+        <!-- 未选择 -->
+        <view style="display:flex;justify-content:start;width:100%;flex-direction:row-reverse">
+          <van-image round width="30px" height="30px" src="/static/plus.png" />
+        </view>
+      </view>
+    </van-card>
+
+
+  </view>
+
+
+  <van-tabbar active="{{ active }}" bind:change="onChange">
+    <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+    <van-tabbar-item icon="send-gift-o">购物车</van-tabbar-item>
+    <van-tabbar-item icon="orders-o">订单</van-tabbar-item>
+    <van-tabbar-item icon="contact">我的</van-tabbar-item>
+  </van-tabbar>
+
+</view>

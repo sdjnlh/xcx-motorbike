@@ -1,0 +1,33 @@
+<view>
+  <!-- 商品部分 -->
+  <view style="display:flex;justify-content:start;">
+    <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+      <van-sidebar-item title="{{item}}" wx:for="{{menus}}" />
+      <!-- <van-sidebar-item title="仙草" /> -->
+      <!-- <van-sidebar-item title="冰奶茶" /> -->
+      <!-- <van-sidebar-item title="台湾风味" /> -->
+    </van-sidebar>
+
+    <view style="flex-grow:1;margin-bottom:100px">
+      <van-card wx:for="{{items}}" style="width:80%" tag="{{item.tag}}" price="{{item.price}}" desc="{{item.detail}}" title="{{item.title}}" thumb="{{item.coverUrl}}">
+
+      <view slot="price-top">
+        <!-- 选择 -->
+        <view style="display:flex;justify-content:start;width:100%;flex-direction:row-reverse" wx:if="{{item.showStep}}">
+          <van-stepper min="0" value="{{ 1 }}"  bind:change="stepChange"  data-item="{{item}}" data-index="{{index}}"/>
+        </view>
+        <!-- 未选择 -->
+        <view style="display:flex;justify-content:start;width:100%;flex-direction:row-reverse" wx:else>
+          <van-image round width="15px" height="15px" src="/static/plus.png"  bindtap="addToCart" data-item="{{item}}" data-index="{{index}}"/>
+        </view>
+      </view>
+
+      </van-card>
+    </view>
+
+  </view>
+
+
+  <van-submit-bar price="{{ order.total }}" disabled="{{order.total === 0}}" button-text="提交订单" tip="{{order.total === 0?'请浏览商品，添加到购物车':'提交订单，立即支付'}}" tip-icon="https://img.yzcdn.cn/1.png" bind:submit="onSubmit" />
+
+</view>

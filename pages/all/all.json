@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-sidebar": "/path/to/@vant/weapp/dist/sidebar/index",
+    "van-sidebar-item": "/path/to/@vant/weapp/dist/sidebar-item/index",
+    "van-card": "/path/to/@vant/weapp/dist/card/index",
+    "van-submit-bar": "/path/to/@vant/weapp/dist/submit-bar/index",
+    "van-image": "/path/to/@vant/weapp/dist/image/index",
+    "van-stepper": "/path/to/@vant/weapp/dist/stepper/index"
+  }
+}

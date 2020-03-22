@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/comments/comments",
+    "pages/comment-creator/creator",
+    "pages/order/order",
+    "pages/order-creator/creator",
+    "pages/mine/mine",
+    "pages/all/all",
+    "pages/order-detail/detail",
+    "pages/cart/cart",
+    "pages/goods-detail/goods",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "悸动奶茶",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

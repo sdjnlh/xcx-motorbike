@@ -1,0 +1,54 @@
+<view style="padding:10px">
+  <view style="font-size:12px;color:#b0b0b0">
+    待买商品
+  </view>
+
+  <van-card num="{{item.count}}" price="{{item.price}}" desc="{{item.detail}}" title="{{item.title}}" thumb="{{item.coverUrl}}"  wx:for="{{cart}}"/>
+  <van-divider />
+
+  <view style="font-size:12px;color:#333333;display:flex;justify-content:space-between">
+    <view>前面等待</view>
+    <view>{{order.queue}}人</view>
+  </view>
+
+    <van-divider />
+
+  <view style="font-size:12px;color:#333;display:flex;justify-content:space-between" bindtap="showActionSheet">
+    <view>预定座位</view>
+    <view>
+   
+    {{order.queueType}}
+     <van-icon name="arrow-down" />
+    </view>
+  </view>
+
+  <van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  bind:close="onClose"
+  bind:select="onSelect"
+/>
+
+  <van-divider />
+  <view style="font-size:12px;color:#333333;display:flex;justify-content:space-between">
+    <view>预计等待时间</view>
+    <view>{{order.queue === 0?'无需等待':order.queue * 15 + '分钟'}}</view>
+  </view>
+  <van-divider />
+  <view style="font-size:12px;color:#333333;display:flex;justify-content:space-between">
+    <view>共 {{cart.length + 1}} 件商品</view>
+    <view>合计 ￥{{order.total}}</view>
+  </view>
+
+
+
+  <van-divider />
+  <view style="font-size:12px;color:#333333;display:flex;justify-content:space-between">
+    <view>下单时间</view>
+    <view>{{order.created}}</view>
+  </view>
+  <van-divider />
+  <van-button type="primary" block bindtap="createOrder">购买并等待</van-button>
+
+
+</view>

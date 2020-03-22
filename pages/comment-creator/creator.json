@@ -1,0 +1,10 @@
+{
+ 
+  
+  "usingComponents": {
+    "van-field": "/path/to/@vant/weapp/dist/field/index",
+    "van-button": "/path/to/@vant/weapp/dist/button/index",
+    "van-rate": "/path/to/@vant/weapp/dist/rate/index",
+    "van-dialog": "/path/to/@vant/weapp/dist/dialog/index"
+  }
+}

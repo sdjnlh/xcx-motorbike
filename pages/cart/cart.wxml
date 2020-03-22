@@ -1,0 +1,28 @@
+<view>
+
+ <view style="display:flex;flex-direction:column;justify-content:center;align-items:center;height:50vh" wx:if="{{cart.length === 0}}">
+ <van-icon name="cart-o"  style="font-size:5rem;color:#ccc"/>
+  <view style="font-size:12px;color:#ccc;" >购物车是空的，快去购买吧</view>
+ </view>
+ <!-- 购物车信息 -->
+ <view wx:else>
+ <van-card wx:for="{{cart}}" style="width:80%" tag="{{item.tag}}" price="{{item.price}}" desc="{{item.detail}}" title="{{item.title}}" thumb="{{item.coverUrl}}">
+
+      <view slot="price-top">
+        <!-- 选择 -->
+        <view style="display:flex;justify-content:start;width:100%;flex-direction:row-reverse">
+          <van-stepper min="0" value="{{ item.count }}"  bind:change="stepChange"  data-item="{{item}}" data-index="{{index}}"/>
+        </view>
+      
+      </view>
+
+      </van-card>
+
+ </view>
+
+  <van-submit-bar
+  price="{{ total }}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+/>
+</view>

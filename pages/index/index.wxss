@@ -1,0 +1,7 @@
+
+.line-up {
+  line-height: 75px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  color: white
+}

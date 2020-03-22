@@ -1,0 +1,5 @@
+.small-button{
+  width: 80px !important;
+  margin-right: 20px !important;
+  
+}
